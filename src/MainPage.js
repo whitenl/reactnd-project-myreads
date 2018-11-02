@@ -21,14 +21,14 @@ class MainPage extends Component {
 								.filter(book => book.shelf === 'currentlyReading')
 								.map(book => (
 								    <li key={book.id}>
-                       					<Book 
+                      <Book 
 											book={book}
 											moveShelf={this.props.moveShelf}
 											currentShelf="currentlyReading"
-                       					/>
-                      				</li>
-	                      		))
-	                    }
+                       />
+                    </li>
+	                 ))
+	               }
                     </ol>
                   </div>
                 </div>
@@ -40,8 +40,8 @@ class MainPage extends Component {
 							this.props.books
 								.filter(book => book.shelf === 'wantToRead')
 								.map(book => (
-								    <li key={book.id}>
-                       					<Book 
+								  <li key={book.id}>
+                    <Book 
 											book={book}
 											moveShelf={this.props.moveShelf}
 											currentShelf="wantToRead"
