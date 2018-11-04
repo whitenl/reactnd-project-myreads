@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 import Book from './Book';
 
-class MainPage extends Component {
+class Main extends Component {
 	render () {
 		console.log(this.props.books);
 		return (
 			          <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
-            </div>
+</div>
             <div className="list-books-content">
               <div>
                 <div className="bookshelf">
@@ -23,9 +23,9 @@ class MainPage extends Component {
 								.map(book => (
 								    <li key={book.id}>
                       <Book 
-											book={book}
-											moveShelf={this.props.moveShelf}
-											currentShelf="currentlyReading"
+						book={book}
+						moveShelf={this.props.moveShelf}
+						currentShelf="currentlyReading"
                        />
                     </li>
 	                 ))
@@ -43,10 +43,10 @@ class MainPage extends Component {
 								.map(book => (
 								  <li key={book.id}>
                     <Book 
-											book={book}
-											moveShelf={this.props.moveShelf}
-											currentShelf="wantToRead"
-                       					/>
+						book={book}
+						moveShelf={this.props.moveShelf}
+						currentShelf="wantToRead"
+   					/>
                       				</li>
 	                      		))
 	                    }
@@ -84,4 +84,4 @@ class MainPage extends Component {
 
 }
 
-export default MainPage;
+export default Main;
