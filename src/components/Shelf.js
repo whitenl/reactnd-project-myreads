@@ -1,52 +1,45 @@
-import React, { Component } from 'react';
-import Book from './Book'
+import React, { Component } from "react";
+import Book from "./Book";
 
 class Shelf extends Component {
-  
-static get shelves() {
+  static get shelves() {
     return [
       {
         id: "currentlyReading",
-        title: "Currently Reading",  
+        title: "Currently Reading"
       },
 
       {
         id: "wantToRead",
-        title: "Want to Read",  
+        title: "Want to Read"
       },
 
       {
         id: "read",
-        title: "Read",  
-      },
-    ]
+        title: "Read"
+      }
+    ];
   }
 
-  render () {
-    
+  render() {
     return (
-      <div className="bookshelf">      
-
+      <div className="bookshelf">
         <h2 className="bookshelf-title">{this.props.title}</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-            {
-            this.props.books.map((book) => (
-                <li key={book.id}>
-                <Book 
+            {this.props.books.map(book => (
+              <li key={book.id}>
+                <Book
                   book={book}
                   moveShelf={this.props.moveShelf}
                   currentShelf={this.props.currentShelf}
                 />
-                </li>
-              ))
-            }
-            </ol>
+              </li>
+            ))}
+          </ol>
         </div>
-
       </div>
-
-    )
+    );
   }
 }
 
