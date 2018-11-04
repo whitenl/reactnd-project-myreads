@@ -41,14 +41,12 @@ class SearchPage extends Component {
                 >Close</Link>
 
               <div className="search-books-input-wrapper">
-                {
 
-                }
                 <input 
-                type="text" 
-                placeholder="Search by title or author"
-                value={this.state.query}
-                onChange={(event) => this.updateQuery(event.target.value)}
+                  type="text" 
+                  placeholder="Search by title or author"
+                  value={this.state.query}
+                  onChange={(event) => this.updateQuery(event.target.value)}
                 />
               </div>
             </div>
