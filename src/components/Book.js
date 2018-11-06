@@ -4,7 +4,7 @@ import Shelf from "./Shelf.js";
 class Book extends Component {
   render() {
     let book = this.props.book;
-    let displayThumbnail = book.imageLinks ? book.imageLinks.thumbnail : "";
+    let displayThumbnail = book.imageLinks ? book.imageLinks.thumbnail : 'https://dummyimage.com/128x193/2e7c31/fff.png&text=Cover+Missing'; 
 
     return (
       <div className="book">
