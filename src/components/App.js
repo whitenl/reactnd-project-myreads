@@ -5,37 +5,26 @@ import Main from './components/Main';
 import * as BooksAPI from './BooksAPI';
 import './App.css'
 
+
 class BooksApp extends React.Component {
   state = {
     books: []
   }
 
   componentDidMount() {
-    this.getBookDetails()
-    // BooksAPI.getAll().then((books) => {
-    //   this.setState({ books: books })
-    // })
-  }
-
-  getBookDetails = () => {
-     BooksAPI.getAll().then((books) => {
+    BooksAPI.getAll().then((books) => {
       this.setState({ books: books })
     })
   }
 
   moveShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(() => {
-      this.getBookDetails()
+    BooksAPI.update(book, shelf).then(
+
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books: books })
     })
-  
-}
-
-
-
-
-
-
-
+  }
+  );
 
   render() {
  
